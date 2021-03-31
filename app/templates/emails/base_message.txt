@@ -1,0 +1,7 @@
+尊敬的Robot的用户 {{ user.username }},
+
+{% block message %}
+{% endblock %}
+
+服务电话：400-800-8888
+© 2017{{ app_name }}

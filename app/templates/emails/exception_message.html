@@ -1,0 +1,9 @@
+{% extends 'emails/base_message.html' %}
+
+{% block message %}
+ <p style="color: #555; font-size: 14px; line-height: 24px; text-justify: inter-ideograph;  padding-top: 0px; margin-top: 10px; overflow: scroll; white-space:nowrap;">
+    {% autoescape false %}
+    {{ exception_message }} 
+    {% endautoescape %}
+ </p>
+ {% endblock %}

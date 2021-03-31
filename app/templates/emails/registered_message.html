@@ -1,0 +1,25 @@
+{% extends 'emails/base_message.html' %}
+
+{% block message %}
+<p style="color: #555; font-size: 14px; line-height: 24px; padding-top: 0px; text-justify: inter-ideograph; text-align: justify; margin-top: 0; margin-bottom: 0;">
+    您好！            </p>
+ <p style="color: #555; font-size: 14px; line-height: 24px; text-justify: inter-ideograph;  padding-top: 0px; margin-top: 10px;">
+    感谢您注册了Robot，请点击下方的链接（按钮）进行验证 
+ </p>
+<p style="margin-top: 30px;">
+     <a style="background: #19bc9c none repeat scroll 0 0; border: 1px solid #fff; border-radius: 6px; color: #fff; padding: 10px 16px; font-size: 14px; text-decoration: none;" href="{{ confirm_email_link }}">点击验证</a>
+ </p>
+ <p style="color: #555; font-size: 14px; line-height: 24px; padding-top: 15px; text-justify: inter-ideograph; word-wrap: break-word; margin-bottom: 0;">
+    如果链接无法跳转，请复制以下链接地址至浏览器中打开 
+ </p>
+ <p style="color: #555; font-size: 14px; line-height: 24px; padding-top: 0px; text-justify: inter-ideograph; word-wrap: break-word; margin-top: 0; margin-bottom: 0;">
+     <a style="color: #19bc9c;" href="{{ confirm_email_link }}">{{ confirm_email_link }}</a>
+ </p>
+ 
+ 
+ <p style="margin-top: 70px; margin-bottom: 0; font-size: 14px; line-height: 24px; color: #555;">系统发信，请勿回复</p>
+ <p style="margin-top: 0px; margin-bottom: 70px; ; font-size: 14px; line-height: 24px; color: #555;">Robot运营团队</p>
+ <p style="margin-left: -20px; margin-right: -20px; ; margin-top: 30px; margin-bottom: 0; font-size: 12px; line-height: 24px; color: #19bc9c; border-top: 1px solid #eeeded; padding-top: 15px; padding-bottom: 5px;">
+     <span style="font-size: 12px; line-height: 24px; color: #19bc9c; padding-left: 25px; padding-right: 20px;">Robot为你提供最优质的服务！</span>
+ </p>
+ {% endblock %}

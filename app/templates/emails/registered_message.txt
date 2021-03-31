@@ -1,0 +1,11 @@
+{% extends 'emails/base_message.txt' %}
+
+{% block message %}
+您好！
+
+感谢您注册了Robot，请复制以下链接地址至浏览器中打开
+    {{ confirm_email_link }}
+
+系统邮件，请勿回复
+
+{% endblock %}

@@ -1,0 +1,7 @@
+{% extends 'emails/base_message.txt' %}
+
+{% block message %}
+您好！
+    {{ exception_message }}
+
+{% endblock %}
