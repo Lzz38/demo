@@ -80,7 +80,7 @@ def webpage_to_editable_pdf(
 if __name__ == "__main__":
 
     webpage_to_editable_pdf(
-        url="https://mp.weixin.qq.com/",
+        url="https://www.plsim.com/#/powerModulesDatasheet?do=update&name=HD60DB12M1H1-L12",
         output_path="wechat_article.pdf",
         options={
             'waitUntil': 'networkidle0',  

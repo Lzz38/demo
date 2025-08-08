@@ -28,15 +28,18 @@ class SecondOrderLowPassFilter:
 
         # 步骤1：计算数字截止角频率(用于频率预畸变)
         omega_d = 2 * np.pi * fc / fs  # 数字截止角频率(rad/sample)
+        print(omega_d)
 
         # 步骤2：频率预畸变(双线性变换补偿频率畸变)
         # 计算等效的模拟截止角频率
         omega_n = 2 * fs * np.tan(omega_d / 2)  # 模拟截止角频率(rad/s)
+        print(omega_n)
 
         # 步骤3：计算滤波器系数(基于双线性变换)
         fs_sq = fs ** 2  # 采样频率平方
         omega_n_sq = omega_n ** 2  # 模拟截止角频率平方
         denominator = (4 * fs_sq) + (4 * zeta * omega_n * fs) + omega_n_sq
+        print(denominator)
 
         # 分子系数(对应b0, b1, b2)
         self.b0 = omega_n_sq / denominator

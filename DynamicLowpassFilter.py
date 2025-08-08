@@ -109,7 +109,7 @@ class DynamicLowpassFilter:
         """
         n = len(signal)
         segment_length, hop_length = self._compute_segment_and_hop(n)
-
+        print(f"Segment length: {segment_length}, Hop length: {hop_length}")
         # 计算每段的起始位置
         starts = np.arange(0, max(1, n - segment_length + 1), hop_length)
         if len(starts) == 0:
@@ -278,7 +278,8 @@ if __name__ == "__main__":
         0.5 * np.sin(2 * np.pi * 5 * t_demo[:len(t_demo)//2]),
         0.5 * np.sin(2 * np.pi * 5 * t_demo[len(t_demo)//2:]) + 0.3 * np.sin(2 * np.pi * 80 * t_demo[len(t_demo)//2:])
     ])
-
+    # 打印signal_demo的长度和前10个样本
+    print(f"Signal length: {len(signal_demo)}, First 10 samples: {signal_demo[:10]}")
     # 使用类进行动态滤波
     dlpf = DynamicLowpassFilter(fs=fs_demo, segment_duration=0.5, energy_ratio=0.9, filter_order=4)
     filtered_signal_demo = dlpf.process(signal_demo)
